@@ -4,6 +4,8 @@ import { AddForm } from "./AddForm/AddForm";
 import { ContactList } from "./ContactList/ContactList";
 import { Filter } from "./Filter/Filter";
 
+import "./index.css";
+
 class App extends React.Component {
   constructor() {
     super();

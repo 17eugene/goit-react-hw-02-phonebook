@@ -22,9 +22,6 @@ class AddForm extends React.Component {
     e.preventDefault();
     this.props.submitHandler(this.state);
     this.setState({ name: "", number: "" });
-    console.log(this.state);
-    console.log(this.state.name);
-    console.log(this.state.number);
   };
 
   render() {
