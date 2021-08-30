@@ -21,6 +21,19 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    const parsedData = JSON.parse(localStorage.getItem("contacts"));
+    if (parsedData) {
+      this.setState({ contacts: parsedData });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
+    }
+  }
+
   formSubmitHandler = (data) => {
     let newContact = {
       id: shortid.generate(),
